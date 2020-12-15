@@ -106,7 +106,7 @@ namespace HalloLinq
             var sl = new SLDocument("MeinZeug.xlsx");
 
             //todo
-            sl.GetCells().SelectMany(x => x.Value).Where(x => x.Value is decimal).Sum(x => x.Value. as decimal);
+            //sl.GetCells().SelectMany(x => x.Value).Where(x => x.Value is decimal).Sum(x => x.Value. as decimal);
             
 
         }

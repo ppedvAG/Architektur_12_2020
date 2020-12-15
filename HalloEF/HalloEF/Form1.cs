@@ -1,6 +1,7 @@
 ﻿using HalloEF.Data;
 using HalloEF.Model;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -17,12 +18,18 @@ namespace HalloEF
 
         private void LadenButton_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = context.Mitarbeiter.ToList();
+            var query = context.Mitarbeiter.Where(x => x.Name.StartsWith("F") &&
+                                                       x.GebDatum.Month > 2)
+                                           .OrderBy(x => x.Abteilungen.Sum(y => y.Bezeichung.Length));
+
+            Debug.WriteLine(query.ToString());
+
+            dataGridView1.DataSource = query.ToList();
         }
 
         private void SpeichernButton_Click(object sender, EventArgs e)
         {
-
+            context.SaveChanges();
         }
 
         private void DemoButton_Click(object sender, EventArgs e)
@@ -36,7 +43,7 @@ namespace HalloEF
                 {
                     Beruf = "Macht dinge",
                     GebDatum = DateTime.Now.AddYears(-50).AddDays(i * 17),
-                    Name=$"Fred #{i:000}"
+                    Name = $"Fred #{i:000}"
                 };
 
                 if (i % 2 == 0)

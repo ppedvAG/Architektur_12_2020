@@ -24,6 +24,8 @@ namespace HalloDB
                 //cmd.Connection = con;
 
                 var cmd = con.CreateCommand();
+
+
                 cmd.CommandText = "SELECT * FROM Personen";
 
                 var reader = cmd.ExecuteReader();

@@ -49,6 +49,10 @@
       <Project>{89f8240e-c49a-419b-bb99-df5e4ab2dc26}</Project>
       <Name>ppedv.Druckverwaltung.Data.EF</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ppedv.Druckverwaltung.Model\ppedv.Druckverwaltung.Model.csproj">
+      <Project>{a9b9cfc1-b8d0-41a9-961b-37829ca8b7d4}</Project>
+      <Name>ppedv.Druckverwaltung.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

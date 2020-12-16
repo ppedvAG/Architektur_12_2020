@@ -20,8 +20,10 @@ namespace HalloDB
                 con.Open();
                 Console.WriteLine("DB Verbindung ok");
 
-                var cmd = new SqlCommand();
-                cmd.Connection = con;
+                //var cmd = new SqlCommand();
+                //cmd.Connection = con;
+
+                var cmd = con.CreateCommand();
                 cmd.CommandText = "SELECT * FROM Personen";
 
                 var reader = cmd.ExecuteReader();

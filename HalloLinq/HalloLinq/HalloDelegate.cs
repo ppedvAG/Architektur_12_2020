@@ -33,6 +33,8 @@ namespace HalloLinq
             List<string> texte = new List<string>();
             texte.Where(x => x.StartsWith("b"));
             texte.Where(Filter);
+
+            // http://linq101.nilzorblog.com/linq101-lambda.php
         }
 
         private bool Filter(string arg)

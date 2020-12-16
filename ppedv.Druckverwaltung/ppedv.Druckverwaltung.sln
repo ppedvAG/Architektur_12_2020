@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{E7FF5A9A-7BE4-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Druckverwaltung.UI.DevConsole", "ppedv.Druckverwaltung.UI.DevConsole\ppedv.Druckverwaltung.UI.DevConsole.csproj", "{DA5FAF57-5C75-4DC3-A75E-52ACD4E06B85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Druckverwaltung.UI.Web", "ppedv.Druckverwaltung.UI.Web\ppedv.Druckverwaltung.UI.Web.csproj", "{61F6EBD9-1357-4FCB-83B8-362DDAF930A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{DA5FAF57-5C75-4DC3-A75E-52ACD4E06B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5FAF57-5C75-4DC3-A75E-52ACD4E06B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5FAF57-5C75-4DC3-A75E-52ACD4E06B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F6EBD9-1357-4FCB-83B8-362DDAF930A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F6EBD9-1357-4FCB-83B8-362DDAF930A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F6EBD9-1357-4FCB-83B8-362DDAF930A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F6EBD9-1357-4FCB-83B8-362DDAF930A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{89F8240E-C49A-419B-BB99-DF5E4AB2DC26} = {38054C10-8B4D-4917-BFCD-8C2B8048B70B}
 		{4DA2AB5F-0112-4EA1-986D-091964F3A1CD} = {38054C10-8B4D-4917-BFCD-8C2B8048B70B}
 		{DA5FAF57-5C75-4DC3-A75E-52ACD4E06B85} = {E7FF5A9A-7BE4-4AD8-AA92-3338597051DC}
+		{61F6EBD9-1357-4FCB-83B8-362DDAF930A8} = {E7FF5A9A-7BE4-4AD8-AA92-3338597051DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AE9C47F-8392-409A-B2A7-15A38EDC97F5}

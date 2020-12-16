@@ -21,6 +21,8 @@ namespace ppedv.Druckverwaltung.UI.DevConsole
                 Console.WriteLine($"{p.Name}");
             }
 
+            Console.WriteLine($"Der Längste: {core.GetLongestDruckauftrag().Material}");
+
             Console.WriteLine("Ende");
             Console.ReadLine();
         }

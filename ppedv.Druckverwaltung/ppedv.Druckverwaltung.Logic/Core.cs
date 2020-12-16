@@ -19,9 +19,18 @@ namespace ppedv.Druckverwaltung.Logic
 
         public Druckauftrag GetLongestDruckauftrag()
         {
-            return Repository.Query<Druckauftrag>().Where(x => x.Status == Druckstatus.Fertig)
-                                                   .OrderBy(x => x.Ende - x.Start)
-                                                   .FirstOrDefault();
+            var dbQuery =  Repository.Query<Druckauftrag>()
+                                     .Where(x => x.Status == Druckstatus.Fertig)
+                                     .ToList();
+
+            var sortiert = dbQuery.OrderBy(x => x.Ende - x.Start);
+
+            return sortiert.FirstOrDefault();
+
+            //return Repository.Query<Druckauftrag>().Where(x => x.Status == Druckstatus.Fertig) 
+            //                                       .ToList() //bis hier ist Linq-To-entities
+            //            /*LINQ-to-Objects*/        .OrderBy(x => x.Ende - x.Start)
+            //            /*LINQ-to-Objects*/        .FirstOrDefault();
         }
 
 

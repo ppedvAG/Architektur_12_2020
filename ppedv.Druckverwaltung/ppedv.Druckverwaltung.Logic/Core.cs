@@ -23,7 +23,7 @@ namespace ppedv.Druckverwaltung.Logic
                                      .Where(x => x.Status == Druckstatus.Fertig)
                                      .ToList();
 
-            var sortiert = dbQuery.OrderBy(x => x.Ende - x.Start);
+            var sortiert = dbQuery.OrderByDescending(x => x.Ende - x.Start).ThenBy(x=>x.Material);
 
             return sortiert.FirstOrDefault();
 
